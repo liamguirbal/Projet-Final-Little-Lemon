@@ -1,9 +1,10 @@
-﻿//Fichier du Main
+﻿import Hero from './Hero'
+
 function Body() {
     return (
         <main>
-            <h1>Little Lemon Chicago</h1>
-            <p>Ceci est mon composant Header !</p>
+            <Hero />
+            {/* Plus tard, on ajoutera ici <Specialties />, <Testimonials />, etc. */}
         </main>
     )
 }

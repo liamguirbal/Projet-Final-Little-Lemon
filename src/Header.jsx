@@ -1,9 +1,13 @@
-﻿//Fichier du Header
+﻿import Nav from './Nav'
+
 function Header() {
     return (
-        <header>
-            <img src={`Logo.png`} alt="logo"/>
-            <h1>Bienvenue chez Little Lemon !</h1>
+        <header className="topbar">
+            {/* Ton logo à gauche */}
+            <img src="/Logo.png" alt="Little Lemon Logo" className="logo" />
+
+            {/* Ta navigation à droite */}
+            <Nav />
         </header>
     )
 }
