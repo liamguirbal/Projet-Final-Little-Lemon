@@ -3,12 +3,12 @@ import { Routes, Route, useNavigate } from 'react-router-dom'
 import HomePage from './HomePage'
 import BookingPage from './BookingPage'
 import ConfirmedBooking from './ConfirmedBooking'
-
+//initialisation des créneaux horaires grace a l'API extere
 export const initializeTimes = () => {
     const today = new Date();
     return window.fetchAPI ? window.fetchAPI(today) : ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
 }
-
+//Mise à Jour dynamique des horaires dispovible selon la date selectionnée.
 export const updateTimes = (state, action) => {
     if (action.type === 'UPDATE_TIMES') {
         const selectedDate = new Date(action.payload);

@@ -7,7 +7,7 @@ export default function BookingForm(props) {
         guests: "2",
         occasion: ""
     });
-
+//Vérification globale des chants pour activer ou non le bouton d'envoi.
     const isFormValid =
         booking.resDate !== "" &&
         booking.resTime !== "" &&
@@ -27,7 +27,7 @@ export default function BookingForm(props) {
             props.dispatch({ type: 'UPDATE_TIMES', payload: value });
         }
     };
-
+//Empeche le rechargement de la page et transmet les dorrées de résevation
     const handleSubmit = (e) => {
         e.preventDefault();
         props.submitForm(booking);
