@@ -8,6 +8,13 @@ export default function BookingForm(props) {
         occasion: ""
     });
 
+    const isFormValid =
+        booking.resDate !== "" &&
+        booking.resTime !== "" &&
+        booking.guests >= 1 &&
+        booking.guests <= 10 &&
+        booking.occasion !== "";
+
     const handleChange = (e) => {
         const { name, value } = e.target;
 
@@ -35,6 +42,7 @@ export default function BookingForm(props) {
                 name="resDate"
                 value={booking.resDate}
                 onChange={handleChange}
+                required
             />
 
             <label htmlFor="res-time">Choose time</label>
@@ -43,6 +51,7 @@ export default function BookingForm(props) {
                 name="resTime"
                 value={booking.resTime}
                 onChange={handleChange}
+                required
             >
                 {props.availableTimes.map((time) => (
                     <option key={time} value={time}>{time}</option>
@@ -59,6 +68,7 @@ export default function BookingForm(props) {
                 name="guests"
                 value={booking.guests}
                 onChange={handleChange}
+                required
             />
 
             <label htmlFor="occasion">Occasion</label>
@@ -67,12 +77,19 @@ export default function BookingForm(props) {
                 name="occasion"
                 value={booking.occasion}
                 onChange={handleChange}
+                required
             >
+                <option value="">Select an occasion</option>
                 <option value="Birthday">Birthday</option>
                 <option value="Anniversary">Anniversary</option>
             </select>
 
-            <input type="submit" value="Make Your reservation" />
+            <input
+                type="submit"
+                value="Make Your reservation"
+                disabled={!isFormValid}
+                aria-label="On Click"
+            />
         </form>
     );
 }
