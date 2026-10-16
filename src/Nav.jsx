@@ -1,13 +1,13 @@
-﻿//Fichier du Header
+﻿import { Link } from 'react-router-dom'
+
 function Nav() {
     return (
-        <nav className="nav-list">
-            {/* On ajoute une classe à la liste complète */}
+        <nav>
             <ul className="nav-list">
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">A Propos</a></li>
+                <li><Link to="/">Accueil</Link></li>
+                <li><a href="#">A propos</a></li>
                 <li><a href="#">Menu</a></li>
-                <li><a href="#">Reservations</a></li>
+                <li><Link to="/booking">Reservations</Link></li>
                 <li><a href="#">Commander en ligne</a></li>
                 <li><a href="#">Se connecter</a></li>
             </ul>
