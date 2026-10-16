@@ -15,7 +15,6 @@
             </div>
 
             <div className="hero-image-container">
-                {/* Assure-toi d'avoir une image nommée "hero-food.jpg" dans ton dossier public */}
                 <img src="/Hero.jpg" alt="Plats méditerranéens" className="hero-image" />
             </div>
         </section>

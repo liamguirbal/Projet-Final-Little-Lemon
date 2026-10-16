@@ -1,4 +1,4 @@
-/* 1. DÉCLARATION DES VARIABLES GLOBALES */
+
 :root {
   --fond-vert: #495E57;
   --fond-jaune: #F4CE14;
@@ -8,7 +8,6 @@
   --black: #333333;
 }
 
-/* Le grand conteneur du haut */
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -16,12 +15,10 @@
   padding: 1rem 5rem;
 }
 
-/* Ajuste la taille de ton logo si besoin */
 .logo {
   height: 60px;
 }
 
-/* Ton menu de navigation */
 .nav-list {
   display: flex;
   gap: 2rem;
@@ -32,7 +29,7 @@
 
 .nav-list a {
   text-decoration: none;
-  color: var(--black); /* <-- Voici comment on utilise ta variable noire */
+  color: var(--black); 
   font-weight: 500;
   font-size: 1.1rem;
 }
@@ -46,12 +43,11 @@ p {
 }
 
 #title {
-  color: var(--jaune); /* <-- Voici comment on utilise ta variable jaune */
+  color: var(--jaune); 
 }
 
-/* --- SECTION HERO --- */
 .hero-section {
-  background-color: var(--fond-vert); /* Le fond vert de la maquette */
+  background-color: var(--fond-vert); 
   padding: 2rem 5rem;
   display: flex;
   justify-content: space-between;
@@ -59,20 +55,20 @@ p {
 }
 
 .hero-content {
-  max-width: 45%; /* Empêche le texte de prendre toute la largeur */
+  max-width: 45%; 
 }
 
 .hero-title {
   color: var(--fond-jaune);
   font-size: 3.5rem;
   margin: 0;
-  font-family: 'Myanmar Text One', serif; /* Ta police de titre */
+  font-family: 'Myanmar Text One', serif;
 }
 
 .hero-subtitle {
   color: var(--blanc);
   font-size: 2rem;
-  margin-top: -10px; /* Rapproche le sous-titre du titre principal */
+  margin-top: -10px; 
   margin-bottom: 20px;
 }
 
@@ -82,14 +78,12 @@ p {
   line-height: 1.5;
   margin-bottom: 30px;
 }
-
-/* --- BOUTON PRINCIPAL --- */
 .btn-primary {
   background-color: var(--fond-jaune);
   color: var(--black);
   border: none;
   padding: 12px 24px;
-  border-radius: 16px; /* Bords arrondis comme sur ta maquette */
+  border-radius: 16px;
   font-weight: bold;
   font-size: 1.1rem;
   cursor: pointer;
@@ -97,15 +91,14 @@ p {
 }
 
 .btn-primary:hover {
-  background-color: var(--jaune-pale); /* Petit effet au survol */
+  background-color: var(--jaune-pale); 
 }
 
-/* --- IMAGE HERO --- */
 .hero-image {
   width: 350px;
   height: 350px;
-  object-fit: cover; /* Permet à l'image de remplir le cadre sans se déformer */
-  border-radius: 16px; /* Arrondi des angles de l'image */
+  object-fit: cover; 
+  border-radius: 16px; 
 }
 
 .footer-container {

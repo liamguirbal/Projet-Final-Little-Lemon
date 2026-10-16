@@ -4,8 +4,6 @@ import '@testing-library/jest-dom/vitest';
 import { render, screen, fireEvent, cleanup } from "@testing-library/react";
 import BookingForm from './BookingForm';
 import { initializeTimes, updateTimes } from './Body';
-
-// Nettoyage du DOM virtuel après chaque test pour éviter les doublons
 afterEach(() => {
     cleanup();
 });
